@@ -8,6 +8,7 @@ import androidx.room.PrimaryKey
 data class Person(
     @ColumnInfo(name = "name") var name: String,
     @ColumnInfo(name = "phone") var phone: String,
+    @ColumnInfo(name = "created_at") val createdAt: Long = System.currentTimeMillis()
 ) {
 
     @PrimaryKey(autoGenerate = true)
